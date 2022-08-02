@@ -15,3 +15,13 @@ BOOL GET_AMMO_IN_CLIP(Ped ped, Hash weaponHash, int* ammo);
 * **ammo**: 
 
 ## Return value
+
+## Example Code:
+
+```lua
+local ped = PlayerPedId() -- current PlayerPed
+local weapon = GetSelectedPedWeapon(ped)
+local boolean, ammo = GetAmmoInClip(ped, weapon)
+
+print(boolean, ammo) -- return a boolean and the current ammo in the clip of your equipped weapon
+```
